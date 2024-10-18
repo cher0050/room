@@ -10,4 +10,8 @@ public class RoomController {
 	public String displayHello() {
 		return "Hello guys";
 	}
+	
+	public String getAllUsers() {
+		return "edavalu";
+	}
 }
