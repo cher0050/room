@@ -2,16 +2,21 @@ package com.cher.room.controllers;
 
 import java.util.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cher.room.entities.Member;
+import com.cher.room.services.UserService;
 
 import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
 public class MemberController {
+	
+	@Autowired
+	public UserService memberService;
 	
 	List<Member> members = new ArrayList<>(List.of(
 			new Member("Madhu",2500.60,new ArrayList<>(List.of("rentshare",1000.0))),
